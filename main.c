@@ -62,9 +62,8 @@ int main()
    printf("Enter a number between 1 and %d\n", MAX_NUM_BACKGROUNDS);
   
   scanf("%d", &bg);
-  printf("You entered %s\n", (backgrounds + ((bg - 1) * MAX_FILENAME_LEN)));
   changeToResultDir = ChangeDirToLocation(resultDir, currDir);
-  /* GET THIS DONE NEXT TIME
+ 
   if(changeToResultDir)
     {
       FILE *file = fopen("hyprpaper.conf", "w");
@@ -73,12 +72,27 @@ int main()
 	  printf("Can't open file");
 	  return -1;
 	}
-      const char* img = backgrounds + ((bg - 1) * MAX_FILENAME_LEN);
-      char* imgPath = strcat(preload, img);
+      //first buffer;
+       const char* preload = "preload = ";
+       const char* bgPath = "~/backgrounds/";
+       const char* img = backgrounds + ((bg - 1) * MAX_FILENAME_LEN);
+       char imgPath[256];
+       strcpy(imgPath, preload);
+       strcat(imgPath, bgPath);
+       strcat(imgPath, img);
+
+       const char* wallpaper = "wallpaper = ";
+       const char* display = "DP-1, ";
+       char wpPath[512];
+       strcpy(wpPath, wallpaper);
+       strcat(wpPath, display);
+       strcat(wpPath, bgPath);
+       strcat(wpPath, img);
+       fprintf(file, "%s\n",imgPath);
+       fprintf(file, "%s", wpPath);
       fclose(file);
-      printf("%s", imgPath);
+      printf("Successfully changed Wallpaper to %s. Please Restart your system or refresh your hyprpaper.conf\n", img);      
     }
-  */
   return 0;
 }
 
