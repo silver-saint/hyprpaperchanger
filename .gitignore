@@ -5,8 +5,8 @@
 *.o
 **/*.o
 
-# Ignore the executable binary file (replace 'my_program' with your actual executable name)
-my_program
+# Ignore the executable binary file 
+hyprpaperchanger
 
 # Ignore compiled libraries
 *.a

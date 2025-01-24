@@ -9,7 +9,7 @@ RELEASE_FLAGS = -Wall -Wextra -O3 -flto -march=native -Werror -pedantic -Wshadow
 
 # Define the build directory and output executable
 BUILD_DIR = build
-EXEC = $(BUILD_DIR)/my_program
+EXEC = $(BUILD_DIR)/hyprpaperchanger
 
 # Recursively find all C source files in the current directory and all subdirectories
 SRC_FILES = $(shell find . -name "*.c")
