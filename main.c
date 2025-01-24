@@ -4,7 +4,7 @@
 #include <dirent.h>
 #include <string.h>
 #include <sys/param.h>
-
+#include "STL/STL.h"
 
 
 
@@ -17,8 +17,9 @@ int FindFolder(char currDir[], const char* folderName);
 void ListAllBackgrounds(char currDir[], char backgrounds[]);
 int IsBackgroundFile(const char* name);
 
-int main()
+int main(void)
 {
+  printf("%d", stuff());
   const char* location = getenv("HOME");
     if(location == NULL)
     {
