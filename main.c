@@ -19,7 +19,8 @@ int IsBackgroundFile(const char* name);
 
 int main(void)
 {
-  printf("%d", stuff());
+  
+  
   const char* location = getenv("HOME");
     if(location == NULL)
     {
@@ -94,6 +95,7 @@ int main(void)
       fclose(file);
       printf("Successfully changed Wallpaper to %s. Please Restart your system or refresh your hyprpaper.conf\n", img);      
     }
+
   return 0;
 }
 
