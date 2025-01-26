@@ -21,7 +21,8 @@ int main(void)
 {
   
   
-  const char* location = getenv("HOME");
+ // const char* location = getenv("HOME");
+  /*
     if(location == NULL)
     {
       printf("Couldn't get working directory\n");
@@ -95,7 +96,11 @@ int main(void)
       fclose(file);
       printf("Successfully changed Wallpaper to %s. Please Restart your system or refresh your hyprpaper.conf\n", img);      
     }
-
+*/
+  String* str = CreateString("kur");
+  String* str2 = CreateString("mur");
+  String* result =  Append(str,str2);
+  PrintString(result);
   return 0;
 }
 
